@@ -1,5 +1,7 @@
-import 'package:bmi_mobile_computing/ui/login_scrren.dart';
+import 'package:bmi_mobile_computing/ui/screens/login_scrren.dart';
 import 'package:flutter/material.dart';
+
+import 'complete_info_screen.dart';
 
 class RegistrationScreen extends StatelessWidget {
   @override
@@ -109,7 +111,12 @@ class RegistrationScreen extends StatelessWidget {
                 width: double.infinity,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) {
+                      return CompleteInfoScreen();
+                    }));
+                  },
                   child: Text(
                     'Create',
                     style: TextStyle(
